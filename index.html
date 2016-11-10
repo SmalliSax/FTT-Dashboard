@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>Findthetune | Intranet</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -71,17 +71,20 @@
         </nav>
 
         <!-- Page Content -->
-        <div class="container">
+        <div class="container dashboard-container">
 
-           <!-- Page Heading -->
-           <div class="row">
+         <!-- Page Heading -->
+         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">
+                <button class="btn btn-primary pull-right">
+                   View Tasks <i class="fa fa-tasks" aria-hidden="true"></i></button>
+                   <h1>
                     <strong>Dashboard</strong><small> Statistics Overview</small>
                 </h1>
+
                 <ol class="breadcrumb">
                     <li class="active">
-                        <i class="fa fa-dashboard"></i> This Dashboard provides you with an overview of different tasks and statistical data relevant to you only.
+                        <i class="fa fa-info-circle"></i> This Dashboard provides you with an overview of different tasks and statistical data relevant to you only.
                     </li>
                 </ol>
             </div>
@@ -103,166 +106,398 @@
                             </div>
                         </div>
 
-                         <div class="progress">
-  <div class="progress-bar progress-bar-striped active" role="progressbar"
-  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-    70%
-  </div>
-</div>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-striped active" role="progressbar"
+                          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                          70%
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="panel" style="background-color:#f5f5f5;">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3" style="float:right;">
+                        <i class="fa fa-globe fa-2x"></i>
+                    </div>
+                    <div class="col-xs-9 text-left">
+                        <div class="huge">Territory sales</div>
+                        <h1 style="font-size:50px;"><strong>115.000,-</strong></h1>
+                        <span>Monthly target: 350.000,-</span>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="panel" style="background-color:#f5f5f5;">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3" style="float:right;">
-                                <i class="fa fa-globe fa-2x"></i>
-                            </div>
-                            <div class="col-xs-9 text-left">
-                                <div class="huge">Territory sales</div>
-                                <h1 style="font-size:50px;"><strong>115.000,-</strong></h1>
-                                <span>Monthly target: 350.000,-</span>
-                            </div>
-                        </div>
-                         <div class="progress">
-  <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
-  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-    40%
-  </div>
-</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="panel" style="background-color:#d9534f; color:white;">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3" style="float:right;">
-                                <i class="fa fa-users fa-2x"></i>
-                            </div>
-                            <div class="col-xs-9 text-left">
-                                <div class="huge">Meetings</div>
-                                <h1 style="font-size:5.7vw;"><strong>3</strong><small>/10</small></h1>
-                                <span>Monthly target: 10 <i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" title="Meetings are logged from the 21st to 20th each month"></i></span>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="panel" style="background-color:green; color:white;">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3" style="float:right;">
-                                <i class="fa fa-phone fa-2x"></i>
-                            </div>
-                            <div class="col-xs-9 text-left">
-                                <div class="huge">Calls</div>
-                                <h1 style="font-size:5.7vw;"><strong>7</strong></h1>
-                                <span>Total calls this month: 7</span>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <!-- /.row -->
-        <div class="row">
 
-        <div class="col-lg-4 col-md-6">
-             <table class="table table-striped">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
+                  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                  40%
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-lg-3 col-md-6">
+    <div class="panel" style="background-color:#d9534f; color:white;">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3" style="float:right;">
+                    <i class="fa fa-users fa-2x"></i>
+                </div>
+                <div class="col-xs-9 text-left">
+                    <div class="huge">Meetings</div>
+                    <h1 style="font-size:5.7vw;"><strong>3</strong><small>/10</small></h1>
+                    <span>Monthly target: 10 <i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" title="Meetings are logged from the 21st to 20th each month"></i></span>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 col-md-6">
+    <div class="panel" style="background-color:green; color:white;">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3" style="float:right;">
+                    <i class="fa fa-phone fa-2x"></i>
+                </div>
+                <div class="col-xs-9 text-left">
+                    <div class="huge">Calls</div>
+                    <h1 style="font-size:5.7vw;"><strong>7</strong></h1>
+                    <span>Total calls this month: 7</span>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+</div>
+<hr>
+<!-- /.row -->
+<div class="row">
+            <div class="col-lg-12">
+                <h1><strong>Client activity</strong></h1>
+     <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-info-circle"></i> Activity from your clients only. Showing most recent logins and downloads.
+                    </li>
+                </ol>
+            </div>
+    <div class="col-lg-6 col-md-6">
+       <table class="table table-striped custab">
+        <thead>
+            <p class="lead text-center">Customer logins <span><i class="fa fa-sign-in" aria-hidden="true"></i>
+            </span></p>
+            <tr>
+                <th>User</th>
+                <th>Company</th>
+                <th>Logged in</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Name"><a href="#">Sindre Hellkås</a></td>
+                <td data-label="Age">NRK</td>
+                <td data-label="Weight">23:59:41</td>
+            </tr>
+            <tr>
+               <td data-label="Name"><a href="#">Sindre Hellkås</a></td>
+               <td data-label="Age">NRK</td>
+               <td data-label="Weight">23:59:41</td>
+           </tr>
+           <tr>
+               <td data-label="Name"><a href="#">Sindre Hellkås</a></td>
+               <td data-label="Age">NRK</td>
+               <td data-label="Weight">23:59:41</td>
+           </tr>
+           <tr>
+               <td data-label="Name"><a href="#">Sindre Hellkås</a></td>
+               <td data-label="Age">NRK</td>
+               <td data-label="Weight">23:59:41</td>
+           </tr>
+           <tr>
+            <td data-label="Name"><a href="#">Sindre Hellkås</a></td>
+            <td data-label="Age">NRK</td>
+            <td data-label="Weight">23:59:41</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div class="col-lg-6 col-md-6">
+   <table class="table table-striped custab">
+    <thead>
+        <p class="lead text-center">Customer downloads <span><i class="fa fa-download" aria-hidden="true"></i>
+        </span></p>
+        <tr>
+            <th>Track</th>
+            <th>Title</th>
+            <th>Customer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
+            <td data-label="Age">Positive Vibes</td>
+            <td data-label="Weight">Sagafilm</td>
+        </tr>
+        <tr>
+            <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
+            <td data-label="Age">Positive Vibes</td>
+            <td data-label="Weight">Sagafilm</td>
+        </tr>
+        <tr>
+            <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
+            <td data-label="Age">Positive Vibes</td>
+            <td data-label="Weight">Sagafilm</td>
+        </tr>
+        <tr>
+            <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
+            <td data-label="Age">Positive Vibes</td>
+            <td data-label="Weight">Sagafilm</td>
+        </tr>
+        <tr>
+            <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
+            <td data-label="Age">Positive Vibes</td>
+            <td data-label="Weight">Sagafilm</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-lg-12">
+                <h1><strong>Top 10 list</strong></h1>
+     <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-info-circle"></i> Overview over your best clients, urgent forecasts and closest renewals.
+                    </li>
+                </ol>
+            </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="table-height">
+           <table class="table table-striped">
             <thead>
-                <p class="lead">Customer logins <span><i class="fa fa-sign-in" aria-hidden="true"></i>
-</span></p>
+                <p class="lead">Top 10 Clients (2016) <span><i class="fa fa-trophy" aria-hidden="true"></i>
+                </span></p>
                 <tr>
-                    <th>User</th>
-                    <th>Company</th>
-                    <th>Logged in</th>
+                    <th>Rank</th>
+                    <th>Client</th>
+                    <th>Sale</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td data-label="Name"><a href="#">Sindre Hellkås</a></td>
-                    <td data-label="Age">NRK</td>
-                    <td data-label="Weight">23:59:41</td>
-                </tr>
-               <tr>
-                    <td data-label="Name">Sindre Hellkås</td>
-                    <td data-label="Age">NRK</td>
-                    <td data-label="Weight">23:59:41</td>
+                    <td data-label="Name">1</td>
+                    <td data-label="Age">Mellow CPH</td>
+                    <td data-label="Weight">17,500</td>
                 </tr>
                 <tr>
-                    <td data-label="Name">Sindre Hellkås</td>
-                    <td data-label="Age">NRK</td>
-                    <td data-label="Weight">23:59:41</td>
+                    <td data-label="Name">2</td>
+                    <td data-label="Age">Mellow CPH</td>
+                    <td data-label="Weight">17,500</td>
                 </tr>
                 <tr>
-                    <td data-label="Name">Sindre Hellkås</td>
-                    <td data-label="Age">NRK</td>
-                    <td data-label="Weight">23:59:41</td>
+                    <td data-label="Name">3</td>
+                    <td data-label="Age">Mellow CPH</td>
+                    <td data-label="Weight">17,500</td>
                 </tr>
                 <tr>
-                    <td data-label="Name">Sindre Hellkås</td>
-                    <td data-label="Age">NRK</td>
-                    <td data-label="Weight">23:59:41</td>
+                    <td data-label="Name">4</td>
+                    <td data-label="Age">Mellow CPH</td>
+                    <td data-label="Weight">17,500</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">5</td>
+                    <td data-label="Age">Mellow CPH</td>
+                    <td data-label="Weight">17,500</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">6</td>
+                    <td data-label="Age">Mellow CPH</td>
+                    <td data-label="Weight">17,500</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">7</td>
+                    <td data-label="Age">Mellow CPH</td>
+                    <td data-label="Weight">17,500</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">8</td>
+                    <td data-label="Age">Mellow CPH</td>
+                    <td data-label="Weight">17,500</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">9</td>
+                    <td data-label="Age">Mellow CPH</td>
+                    <td data-label="Weight">17,500</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">10</td>
+                    <td data-label="Age">Mellow CPH</td>
+                    <td data-label="Weight">17,500</td>
                 </tr>
             </tbody>
         </table>
-        </div>
-        <div class="col-lg-4 col-md-6">
-             <table class="table table-striped">
-            <thead>
-                <p class="lead">Customer downloads <span><i class="fa fa-download" aria-hidden="true"></i>
-</span></p>
-                <tr>
-                    <th>Track</th>
-                    <th>Title</th>
-                    <th>Customer</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
-                    <td data-label="Age">Positive Vibes</td>
-                    <td data-label="Weight">Sagafilm</td>
-                </tr>
-                <tr>
-                    <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
-                    <td data-label="Age">Positive Vibes</td>
-                    <td data-label="Weight">Sagafilm</td>
-                </tr>
-                 <tr>
-                    <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
-                    <td data-label="Age">Positive Vibes</td>
-                    <td data-label="Weight">Sagafilm</td>
-                </tr>
-                 <tr>
-                    <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
-                    <td data-label="Age">Positive Vibes</td>
-                    <td data-label="Weight">Sagafilm</td>
-                </tr>
-                 <tr>
-                    <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
-                    <td data-label="Age">Positive Vibes</td>
-                    <td data-label="Weight">Sagafilm</td>
-                </tr>
-            </tbody>
-        </table>
-        </div>
     </div>
+</div>
+<div class="col-lg-4 col-md-6">
+    <div class="table-height">
+       <table class="table table-striped">
+        <thead>
+            <p class="lead">Most urgent forecasts (2016) <span><i class="fa fa-file-text-o" aria-hidden="true"></i>
+            </span></p>
+            <tr>
+                <th>Expected</th>
+                <th>Customer</th>
+                <th>Margin</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2014-11-03</td>
+                <td data-label="Name">Ísfilm ehf sadsadasd</td>
+                <td data-label="Age">EUR 0.00</td>
+                <td data-label="Weight">Cuesheet</td>
+            </tr>
+            <tr>
+                <td>2014-11-03</td>
+                <td data-label="Name">Ísfilm ehf</td>
+                <td data-label="Age">EUR 0.00</td>
+                <td data-label="Weight">Cuesheet</td>
+            </tr>
+            <tr>
+                <td>2014-11-03</td>
+                <td data-label="Name">Ísfilm ehf</td>
+                <td data-label="Age">EUR 0.00</td>
+                <td data-label="Weight">Cuesheet</td>
+            </tr>
+            <tr>
+                <td>2014-11-03</td>
+                <td data-label="Name">Ísfilm ehf</td>
+                <td data-label="Age">EUR 0.00</td>
+                <td data-label="Weight">Cuesheet</td>
+            </tr>
+            <tr>
+                <td>2014-11-03</td>
+                <td data-label="Name">Ísfilm ehf</td>
+                <td data-label="Age">EUR 0.00</td>
+                <td data-label="Weight">Cuesheet</td>
+            </tr>
+            <tr>
+                <td>2014-11-03</td>
+                <td data-label="Name">Ísfilm ehf</td>
+                <td data-label="Age">EUR 0.00</td>
+                <td data-label="Weight">Cuesheet</td>
+            </tr>
+            <tr>
+                <td>2014-11-03</td>
+                <td data-label="Name">Ísfilm ehf</td>
+                <td data-label="Age">EUR 0.00</td>
+                <td data-label="Weight">Cuesheet</td>
+            </tr>
+            <tr>
+                <td>2014-11-03</td>
+                <td data-label="Name">Ísfilm ehf</td>
+                <td data-label="Age">EUR 0.00</td>
+                <td data-label="Weight">Cuesheet</td>
+            </tr>
+            <tr>
+                <td>2014-11-03</td>
+                <td data-label="Name">Ísfilm ehf</td>
+                <td data-label="Age">EUR 0.00</td>
+                <td data-label="Weight">Cuesheet</td>
+            </tr>
+            <tr>
+                <td>2014-11-03</td>
+                <td data-label="Name">Ísfilm ehf</td>
+                <td data-label="Age">EUR 0.00</td>
+                <td data-label="Weight">Cuesheet</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
 
+<div class="col-lg-4 col-md-6">
+    <div class="table-height">
+       <table class="table table-striped">
+        <thead>
+            <p class="lead">Closest renewals <span><i class="fa fa-undo fa-1x" aria-hidden="true"></i>
+            </span></p>
+            <tr>
+                <th>Period end</th>
+                <th>Customer</th>
+                <th>Region</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2016-11-30</td>
+                <td data-label="Name">Applaus Film & TV AS </td>
+                <td data-label="Age">Norway</td>
+            </tr>
+            <tr>
+                <td>2016-11-30</td>
+                <td data-label="Name">Applaus Film & TV AS </td>
+                <td data-label="Age">Norway</td>
+            </tr>
+            <tr>
+                <td>2016-11-30</td>
+                <td data-label="Name">Applaus Film & TV AS </td>
+                <td data-label="Age">Norway</td>
+            </tr>
+            <tr>
+                <td>2016-11-30</td>
+                <td data-label="Name">Applaus Film & TV AS </td>
+                <td data-label="Age">Norway</td>
+            </tr>
+            <tr>
+                <td>2016-11-30</td>
+                <td data-label="Name">Applaus Film & TV AS </td>
+                <td data-label="Age">Norway</td>
+            </tr>
+            <tr>
+                <td>2016-11-30</td>
+                <td data-label="Name">Applaus Film & TV AS </td>
+                <td data-label="Age">Norway</td>
+            </tr>
+            <tr>
+                <td>2016-11-30</td>
+                <td data-label="Name">Applaus Film & TV AS </td>
+                <td data-label="Age">Norway</td>
+            </tr>
+            <tr>
+                <td>2016-11-30</td>
+                <td data-label="Name">Applaus Film & TV AS </td>
+                <td data-label="Age">Norway</td>
+            </tr>
+            <tr>
+                <td>2016-11-30</td>
+                <td data-label="Name">Applaus Film & TV AS </td>
+                <td data-label="Age">Norway</td>
+            </tr>
+            <tr>
+                <td>2016-11-30</td>
+                <td data-label="Name">Applaus Film & TV AS </td>
+                <td data-label="Age">Norway</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
 
-    </div>
-    <!-- /.container -->
+</div>
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
+</div>
+<!-- /.container -->
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script>
+<!-- jQuery Version 1.11.1 -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script>
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 });

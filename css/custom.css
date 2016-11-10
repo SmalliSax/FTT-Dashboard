@@ -20,7 +20,24 @@
 }
 body {
 	font-family:'Helvetica';
+	background-color:#e1e0e0;
 }
 
 h1 small {color:white; font-size:30px;}
 .panel {height:190px;}
+.table-height {height: 280px; overflow-y: scroll;}
+.dashboard-container {background-color:#fff; padding:20px; border-radius:5px;}
+
+/* CSS for Custom Table */
+
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
