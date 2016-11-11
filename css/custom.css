@@ -1,5 +1,5 @@
 .progress {
-    position: relative;
+	position: relative;
 	height: 25px;
 	margin-top:10px;
 }
@@ -31,13 +31,15 @@ h1 small {color:white; font-size:30px;}
 /* CSS for Custom Table */
 
 .custab{
-    border: 1px solid #ccc;
-    padding: 5px;
-    margin: 5% 0;
-    box-shadow: 3px 3px 2px #ccc;
-    transition: 0.5s;
-    }
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin: 5% 0;
+	box-shadow: 3px 3px 2px #ccc;
+	transition: 0.5s;
+}
 .custab:hover{
-    box-shadow: 3px 3px 0px transparent;
-    transition: 0.5s;
-    }
+	box-shadow: 3px 3px 0px transparent;
+	transition: 0.5s;
+}
+
+.period-selector {margin-right:15px;}
