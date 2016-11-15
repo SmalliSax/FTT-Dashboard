@@ -18,6 +18,16 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <script src="js/jquery.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- jQuery Version 1.11.1 -->
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
 
     <!-- Custom CSS -->
     <style>
@@ -27,119 +37,162 @@
     }
     </style>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+</head>
 
-    </head>
+<body>
 
-    <body>
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Start Bootstrap</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Services</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
             </div>
-            <!-- /.container -->
-        </nav>
-
-        <!-- Page Content -->
-        <div class="container dashboard-container">
-
-           <!-- Page Heading -->
-           <div class="row">
-            <div class="col-lg-12">
-                <button class="btn btn-primary pull-right">
-                 View Tasks <i class="fa fa-tasks" aria-hidden="true"></i></button>
-                 <h1>
-                    <strong>Dashboard</strong><small> Statistics Overview</small>
-                </h1>
-
-                <ol class="breadcrumb">
-                    <li class="active">
-                        <i class="fa fa-info-circle"></i> This Dashboard provides you with an overview of different tasks and statistical data relevant to you only.
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
                     </li>
-                </ol>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
             </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.row -->
+        <!-- /.container -->
+    </nav>
 
+    <!-- Page Content -->
+    <div class="container dashboard-container">
+         <div class="alert alert-success alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Task was successfully created and sent away
+        </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="panel" style="background-color: #323232;color: white;">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="period-selector pull-right">
-                                Nov <i class="fa fa-caret-down" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-9 text-left">
-                                <div class="huge">Personal sales</div>
-                                <h1 style="font-size:50px;"><strong>17.560,-</strong></h1>
-                                <span>Monthly target: 35.000,-</span>
-                            </div>
-                        </div>
+            <div class="col-lg-6 col-md-6">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="float:right;"><i class="fa fa-tasks" aria-hidden="true"></i>
+                   Add task</button>
+                   <h2><strong>Tasks</strong></h2>
+                   <p>Tasks that have been assigned to you:</p>
+                   <table class="table">
+                    <thead>
+                        <tr>
+                            <th>From</th>
+                            <th>Description</th>
+                            <th>Deadline</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Einar</strong></td>
+                            <td class="table-description">Make the new dashboard look smashing and cool and great and awesome.</td>
+                            <td>22/11/2016 12:50 PM</td>
+                            <td><button type="button" class="btn btn-success btn-xs">Completed</button> <button type="button" class="btn btn-danger btn-xs">Reject</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Einar</strong></td>
+                            <td class="table-description">Make 10 calls today. No excuses!</td>
+                            <td>22/11/2016 12:50 PM</td>
+                            <td><button type="button" class="btn btn-success btn-xs">Completed</button> <button type="button" class="btn btn-danger btn-xs">Reject</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
 
-                        <div class="progress">
-                          <div class="progress-bar progress-bar-striped active" role="progressbar"
-                          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                          70%
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="panel" style="background-color:#f5f5f5;">
-            <div class="panel-heading">
-                <div class="row">
-                 <div class="period-selector pull-right">
-                    Nov <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title"><strong>Assign tasks</strong></h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>Assign to:</p>
+                        <select class="form-control">
+                          <option>Einar Helde</option>
+                          <option>Sunil Rana</option>
+                          <option>Mads Larsen</option>
+                          <option>Jonas Olsen</option>
+                          <option>Claus Andersen</option>
+                      </select>
+                      <br/>
+                      <p>Task description</p>
+                      <textarea class="form-control" rows="3"></textarea>
+                      <br/>
+                      <p>Deadline</p>
+                      <div class="form-group">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success add-task" data-dismiss="modal">Send</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 col-md-6">
+    <div class="panel" style="background-color: #337ab7;color: white;">
+        <div class="panel-heading">
+            <div class="row">
                 <div class="col-xs-9 text-left">
-                    <div class="huge">Territory sales</div>
-                    <h1 style="font-size:50px;"><strong>115.000,-</strong></h1>
-                    <span>Monthly target: 350.000,-</span>
+                    <div class="huge">Personal sales</div>
+                    <h1 style="font-size:55px;"><strong>17.5K</strong></h1>
+                    <span>Monthly target: 35.000,-</span>
                 </div>
             </div>
 
             <div class="progress">
-              <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
-              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-              40%
-          </div>
+             <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+             70%
+         </div>
+     </div>
+ </div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+    <div class="panel" style="background-color:#337ab7; color:white;">
+        <div class="panel-heading">
+            <div class="row">
+            <div class="col-xs-9 text-left">
+                <div class="huge">Territory sales</div>
+                <h1 style="font-size:55px;"><strong>115K</strong></h1>
+                <span>Monthly target: 350.000,-</span>
+            </div>
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+          40%
       </div>
   </div>
 </div>
 </div>
+</div>
 <div class="col-lg-3 col-md-6">
-    <div class="panel" style="background-color:#d9534f; color:white;">
+    <div class="panel" style="background-color:#337ab7; color:white;">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3" style="float:right;">
@@ -155,14 +208,14 @@
     </div>
 </div>
 <div class="col-lg-3 col-md-6">
-    <div class="panel" style="background-color:green; color:white;">
+    <div class="panel" style="background-color:#5cb85c; color:#fff;">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3" style="float:right;">
                     <i class="fa fa-phone fa-2x"></i>
                 </div>
                 <div class="col-xs-9 text-left">
-                    <div class="huge">Calls</div>
+                    <div class="huge">Calls Today</div>
                     <h1 style="font-size:5.7vw;"><strong>7</strong></h1>
                     <span>Total calls this month: 7</span>
                 </div>
@@ -171,180 +224,14 @@
     </div>
 </div>
 </div>
-<hr>
 <!-- /.row -->
 <div class="row">
-    <div class="col-lg-12">
-        <h1><strong>Client activity</strong></h1>
-        <ol class="breadcrumb">
-            <li class="active">
-                <i class="fa fa-info-circle"></i> Activity from your clients only. Showing most recent logins and downloads.
-            </li>
-        </ol>
-    </div>
+
+    <!-- FORECASTS -->
     <div class="col-lg-6 col-md-6">
-     <table class="table table-striped custab">
+       <table class="table table-striped custab">
         <thead>
-            <p class="lead text-center">Customer logins <span><i class="fa fa-sign-in" aria-hidden="true"></i>
-            </span></p>
-            <tr>
-                <th>User</th>
-                <th>Company</th>
-                <th>Logged in</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td data-label="Name"><a href="#">Sindre Hellkås</a></td>
-                <td data-label="Age">NRK</td>
-                <td data-label="Weight">23:59:41</td>
-            </tr>
-            <tr>
-             <td data-label="Name"><a href="#">Sindre Hellkås</a></td>
-             <td data-label="Age">NRK</td>
-             <td data-label="Weight">23:59:41</td>
-         </tr>
-         <tr>
-             <td data-label="Name"><a href="#">Sindre Hellkås</a></td>
-             <td data-label="Age">NRK</td>
-             <td data-label="Weight">23:59:41</td>
-         </tr>
-         <tr>
-             <td data-label="Name"><a href="#">Sindre Hellkås</a></td>
-             <td data-label="Age">NRK</td>
-             <td data-label="Weight">23:59:41</td>
-         </tr>
-         <tr>
-            <td data-label="Name"><a href="#">Sindre Hellkås</a></td>
-            <td data-label="Age">NRK</td>
-            <td data-label="Weight">23:59:41</td>
-        </tr>
-    </tbody>
-</table>
-</div>
-<div class="col-lg-6 col-md-6">
- <table class="table table-striped custab">
-    <thead>
-        <p class="lead text-center">Customer downloads <span><i class="fa fa-download" aria-hidden="true"></i>
-        </span></p>
-        <tr>
-            <th>Track</th>
-            <th>Title</th>
-            <th>Customer</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
-            <td data-label="Age">Positive Vibes</td>
-            <td data-label="Weight">Sagafilm</td>
-        </tr>
-        <tr>
-            <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
-            <td data-label="Age">Positive Vibes</td>
-            <td data-label="Weight">Sagafilm</td>
-        </tr>
-        <tr>
-            <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
-            <td data-label="Age">Positive Vibes</td>
-            <td data-label="Weight">Sagafilm</td>
-        </tr>
-        <tr>
-            <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
-            <td data-label="Age">Positive Vibes</td>
-            <td data-label="Weight">Sagafilm</td>
-        </tr>
-        <tr>
-            <td data-label="Name"><a href="#">APL / 155 / 11</a></td>
-            <td data-label="Age">Positive Vibes</td>
-            <td data-label="Weight">Sagafilm</td>
-        </tr>
-    </tbody>
-</table>
-</div>
-</div>
-<hr>
-<div class="row">
-  <div class="col-lg-12">
-    <h1><strong>Top 10 list</strong></h1>
-    <ol class="breadcrumb">
-        <li class="active">
-            <i class="fa fa-info-circle"></i> Overview over your best clients, urgent forecasts and closest renewals.
-        </li>
-    </ol>
-</div>
-<div class="col-lg-4 col-md-6">
-    <div class="table-height">
-     <table class="table table-striped">
-        <thead>
-            <p class="lead">Top 10 Clients (2016) <span><i class="fa fa-trophy" aria-hidden="true"></i>
-            </span></p>
-            <tr>
-                <th>Rank</th>
-                <th>Client</th>
-                <th>Sale</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td data-label="Name">1</td>
-                <td data-label="Age">Mellow CPH</td>
-                <td data-label="Weight">17,500</td>
-            </tr>
-            <tr>
-                <td data-label="Name">2</td>
-                <td data-label="Age">Mellow CPH</td>
-                <td data-label="Weight">17,500</td>
-            </tr>
-            <tr>
-                <td data-label="Name">3</td>
-                <td data-label="Age">Mellow CPH</td>
-                <td data-label="Weight">17,500</td>
-            </tr>
-            <tr>
-                <td data-label="Name">4</td>
-                <td data-label="Age">Mellow CPH</td>
-                <td data-label="Weight">17,500</td>
-            </tr>
-            <tr>
-                <td data-label="Name">5</td>
-                <td data-label="Age">Mellow CPH</td>
-                <td data-label="Weight">17,500</td>
-            </tr>
-            <tr>
-                <td data-label="Name">6</td>
-                <td data-label="Age">Mellow CPH</td>
-                <td data-label="Weight">17,500</td>
-            </tr>
-            <tr>
-                <td data-label="Name">7</td>
-                <td data-label="Age">Mellow CPH</td>
-                <td data-label="Weight">17,500</td>
-            </tr>
-            <tr>
-                <td data-label="Name">8</td>
-                <td data-label="Age">Mellow CPH</td>
-                <td data-label="Weight">17,500</td>
-            </tr>
-            <tr>
-                <td data-label="Name">9</td>
-                <td data-label="Age">Mellow CPH</td>
-                <td data-label="Weight">17,500</td>
-            </tr>
-            <tr>
-                <td data-label="Name">10</td>
-                <td data-label="Age">Mellow CPH</td>
-                <td data-label="Weight">17,500</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-    <div class="table-height">
-     <table class="table table-striped">
-        <thead>
-            <p class="lead">Most urgent forecasts (2016) <span><i class="fa fa-file-text-o" aria-hidden="true"></i>
+            <p class="lead text-center">Most urgent forecasts (2016) <span><i class="fa fa-file-text-o" aria-hidden="true"></i>
             </span></p>
             <tr>
                 <th>Expected</th>
@@ -356,74 +243,90 @@
         <tbody>
             <tr>
                 <td>2014-11-03</td>
-                <td data-label="Name">Ísfilm ehf sadsadasd</td>
-                <td data-label="Age">EUR 0.00</td>
-                <td data-label="Weight">Cuesheet</td>
+                <td><a href="#">Ísfilm ehf</a> </td>
+                <td>EUR 0.00</td>
+                <td>Cuesheet</td>
             </tr>
             <tr>
                 <td>2014-11-03</td>
-                <td data-label="Name">Ísfilm ehf</td>
-                <td data-label="Age">EUR 0.00</td>
-                <td data-label="Weight">Cuesheet</td>
+                <td><a href="#">Ísfilm ehf</a> </td>
+                <td>EUR 0.00</td>
+                <td>Cuesheet</td>
             </tr>
             <tr>
                 <td>2014-11-03</td>
-                <td data-label="Name">Ísfilm ehf</td>
-                <td data-label="Age">EUR 0.00</td>
-                <td data-label="Weight">Cuesheet</td>
+                <td><a href="#">Ísfilm ehf</a> </td>
+                <td>EUR 0.00</td>
+                <td>Cuesheet</td>
             </tr>
             <tr>
                 <td>2014-11-03</td>
-                <td data-label="Name">Ísfilm ehf</td>
-                <td data-label="Age">EUR 0.00</td>
-                <td data-label="Weight">Cuesheet</td>
+                <td><a href="#">Ísfilm ehf</a> </td>
+                <td>EUR 0.00</td>
+                <td>Cuesheet</td>
             </tr>
             <tr>
                 <td>2014-11-03</td>
-                <td data-label="Name">Ísfilm ehf</td>
-                <td data-label="Age">EUR 0.00</td>
-                <td data-label="Weight">Cuesheet</td>
+                <td><a href="#">Ísfilm ehf</a> </td>
+                <td>EUR 0.00</td>
+                <td>Cuesheet</td>
             </tr>
-            <tr>
-                <td>2014-11-03</td>
-                <td data-label="Name">Ísfilm ehf</td>
-                <td data-label="Age">EUR 0.00</td>
-                <td data-label="Weight">Cuesheet</td>
-            </tr>
-            <tr>
-                <td>2014-11-03</td>
-                <td data-label="Name">Ísfilm ehf</td>
-                <td data-label="Age">EUR 0.00</td>
-                <td data-label="Weight">Cuesheet</td>
-            </tr>
-            <tr>
-                <td>2014-11-03</td>
-                <td data-label="Name">Ísfilm ehf</td>
-                <td data-label="Age">EUR 0.00</td>
-                <td data-label="Weight">Cuesheet</td>
-            </tr>
-            <tr>
-                <td>2014-11-03</td>
-                <td data-label="Name">Ísfilm ehf</td>
-                <td data-label="Age">EUR 0.00</td>
-                <td data-label="Weight">Cuesheet</td>
-            </tr>
-            <tr>
-                <td>2014-11-03</td>
-                <td data-label="Name">Ísfilm ehf</td>
-                <td data-label="Age">EUR 0.00</td>
-                <td data-label="Weight">Cuesheet</td>
-            </tr>
+            
         </tbody>
     </table>
 </div>
-</div>
 
-<div class="col-lg-4 col-md-6">
-    <div class="table-height">
-     <table class="table table-striped">
+
+<!-- LOGINS -->
+<div class="col-lg-6 col-md-6">
+   <table class="table table-striped custab">
+    <thead>
+        <p class="lead text-center">Your customer logins <span><i class="fa fa-sign-in" aria-hidden="true"></i>
+        </span></p>
+        <tr>
+            <th>User</th>
+            <th>Company</th>
+            <th>Logged in</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Sindre Hellkås</td>
+            <td>NRK</td>
+            <td>23:59:41</td>
+        </tr>
+       <tr>
+            <td>Sindre Hellkås</td>
+            <td>NRK</td>
+            <td>23:59:41</td>
+        </tr>
+        <tr>
+            <td>Sindre Hellkås</td>
+            <td>NRK</td>
+            <td>23:59:41</td>
+        </tr>
+        <tr>
+            <td>Sindre Hellkås</td>
+            <td>NRK</td>
+            <td>23:59:41</td>
+        </tr>
+        <tr>
+            <td>Sindre Hellkås</td>
+            <td>NRK</td>
+            <td>23:59:41</td>
+        </tr>
+
+</tbody>
+</table>
+</div>
+</div>
+<div class="row">
+
+    <!-- CLOSEST RENEWALS -->
+    <div class="col-lg-6 col-md-6">
+       <table class="table table-striped custab">
         <thead>
-            <p class="lead">Closest renewals <span><i class="fa fa-undo fa-1x" aria-hidden="true"></i>
+            <p class="lead text-center">Closest renewals <span><i class="fa fa-undo fa-1x" aria-hidden="true"></i>
             </span></p>
             <tr>
                 <th>Period end</th>
@@ -434,72 +337,177 @@
         <tbody>
             <tr>
                 <td>2016-11-30</td>
-                <td data-label="Name">Applaus Film & TV AS </td>
-                <td data-label="Age">Norway</td>
+                <td>Applaus Film & TV AS </td>
+                <td>Norway</td>
             </tr>
             <tr>
                 <td>2016-11-30</td>
-                <td data-label="Name">Applaus Film & TV AS </td>
-                <td data-label="Age">Norway</td>
+                <td>Applaus Film & TV AS </td>
+                <td>Norway</td>
+            </tr>
+             <tr>
+                <td>2016-11-30</td>
+                <td>Applaus Film & TV AS </td>
+                <td>Norway</td>
+            </tr>
+             <tr>
+                <td>2016-11-30</td>
+                <td>Applaus Film & TV AS </td>
+                <td>Norway</td>
+            </tr>
+             <tr>
+                <td>2016-11-30</td>
+                <td>Applaus Film & TV AS </td>
+                <td>Norway</td>
+            </tr>
+            
+        </table>
+    </div>
+
+    <!-- DOWNLOADS -->
+    <div class="col-lg-6 col-md-6">
+     <table class="table table-striped custab">
+        <thead>
+            <p class="lead text-center">Your customer downloads <span><i class="fa fa-download" aria-hidden="true"></i>
+            </span></p>
+            <tr>
+                <th>Track</th>
+                <th>Title</th>
+                <th>Customer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>APL / 155 / 11</td>
+                <td>Positive Vibes</td>
+                <td>Sagafilm</td>
+            </tr>
+           <tr>
+                <td>APL / 155 / 11</td>
+                <td>Positive Vibes</td>
+                <td>Sagafilm</td>
             </tr>
             <tr>
-                <td>2016-11-30</td>
-                <td data-label="Name">Applaus Film & TV AS </td>
-                <td data-label="Age">Norway</td>
+                <td>APL / 155 / 11</td>
+                <td>Positive Vibes</td>
+                <td>Sagafilm</td>
             </tr>
             <tr>
-                <td>2016-11-30</td>
-                <td data-label="Name">Applaus Film & TV AS </td>
-                <td data-label="Age">Norway</td>
+                <td>APL / 155 / 11</td>
+                <td>Positive Vibes</td>
+                <td>Sagafilm</td>
             </tr>
             <tr>
-                <td>2016-11-30</td>
-                <td data-label="Name">Applaus Film & TV AS </td>
-                <td data-label="Age">Norway</td>
-            </tr>
-            <tr>
-                <td>2016-11-30</td>
-                <td data-label="Name">Applaus Film & TV AS </td>
-                <td data-label="Age">Norway</td>
-            </tr>
-            <tr>
-                <td>2016-11-30</td>
-                <td data-label="Name">Applaus Film & TV AS </td>
-                <td data-label="Age">Norway</td>
-            </tr>
-            <tr>
-                <td>2016-11-30</td>
-                <td data-label="Name">Applaus Film & TV AS </td>
-                <td data-label="Age">Norway</td>
-            </tr>
-            <tr>
-                <td>2016-11-30</td>
-                <td data-label="Name">Applaus Film & TV AS </td>
-                <td data-label="Age">Norway</td>
-            </tr>
-            <tr>
-                <td>2016-11-30</td>
-                <td data-label="Name">Applaus Film & TV AS </td>
-                <td data-label="Age">Norway</td>
+                <td>APL / 155 / 11</td>
+                <td>Positive Vibes</td>
+                <td>Sagafilm</td>
             </tr>
         </tbody>
     </table>
 </div>
+
+</div><!-- row ends -->
+<div class="row">
+
+    <!-- TOP 10 CLIENTS -->
+    <div class="col-lg-6 col-md-6">
+       <table class="table table-striped custab">
+        <thead>
+            <p class="lead text-center">Top 10 Clients (2016) <span><i class="fa fa-trophy" aria-hidden="true"></i>
+            </span></p>
+            <tr>
+                <th>Rank</th>
+                <th>Client</th>
+                <th>Sale</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mellow CPH</td>
+                <td>17,500</td>
+            </tr>
+             <tr>
+                <td>1</td>
+                <td>Mellow CPH</td>
+                <td>17,500</td>
+            </tr>
+             <tr>
+                <td>1</td>
+                <td>Mellow CPH</td>
+                <td>17,500</td>
+            </tr>
+             <tr>
+                <td>1</td>
+                <td>Mellow CPH</td>
+                <td>17,500</td>
+            </tr>
+             <tr>
+                <td>1</td>
+                <td>Mellow CPH</td>
+                <td>17,500</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
+<!-- DOWNLOADS -->
+<div class="col-lg-6 col-md-6">
+ <table class="table table-striped custab">
+    <thead>
+        <p class="lead text-center">Key clients <span><i class="fa fa-key" aria-hidden="true"></i>
+        </span></p>
+        <tr>
+            <th>Customer</th>
+            <th>Next contact</th>
+            <th>Region</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>val.cust</td>
+            <td>val.nextCont</td>
+            <td>val.region</td>
+        </tr>
+        <tr>
+            <td>val.cust</td>
+            <td>val.nextCont</td>
+            <td>val.region</td>
+        </tr>
+        <tr>
+            <td>val.cust</td>
+            <td>val.nextCont</td>
+            <td>val.region</td>
+        </tr>
+        <tr>
+            <td>val.cust</td>
+            <td>val.nextCont</td>
+            <td>val.region</td>
+        </tr>
+        <tr>
+            <td>val.cust</td>
+            <td>val.nextCont</td>
+            <td>val.region</td>
+        </tr>
+       
+    </tbody>
+</table>
 </div>
+
+</div><!-- row ends -->
+
 
 </div>
 <!-- /.container -->
 
-<!-- jQuery Version 1.11.1 -->
-<script src="js/jquery.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
+    $('#datetimepicker1').datetimepicker();
+    $('.add-task').click(function(){
+        $('.alert').fadeIn("slow", function() { $(this).delay(2500).fadeOut("slow"); });
+    }) 
 });
 </script>
 
