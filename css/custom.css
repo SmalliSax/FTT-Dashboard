@@ -24,12 +24,39 @@ p.lead {margin-bottom: 5px; margin-top: 15px}
 	transition: 0.5s;
 }
 
-.table-description {max-width:170px;}
-.alert{ display: none; }
-
-.table tbody tr th, .table tbody tr td {padding:5px;}
 table.custab { margin: 0% 0; }
 
+.more {width:270px;}
+a.morelink {display:inline-block; text-decoration: none; font-size:13px; font-weight:bold;}
+
+.alert{ display: none; }
+.table tbody tr th, .table tbody tr td {padding:5px;}
+
+/* MAKE TABLE SCROLL ONLY TABLE DATA */
+/* Put class called "scroll" inside <table> element to activate */
+
+table.scroll tbody,
+table.scroll thead tr { display: block; }
+
+table.scroll tbody {
+    height: 155px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+table.scroll tbody td,
+table.scroll thead th {
+    width: 140px;
+}
+
+table.scroll thead th:last-child {
+    width: 156px; /* 140px + 16px scrollbar width */
+}
+
+/* TABLE SCROLL CSS ENDS */
+
+
+/* PROGRESS BAR STARTS */
 .progress {
 	position: relative;
 	height: 25px;
@@ -52,3 +79,10 @@ table.custab { margin: 0% 0; }
 }
 
 /* PROGRESS BAR CSS ENDS */
+
+.morecontent span {
+    display: none;
+}
+.morelink {
+    display: block;
+}
