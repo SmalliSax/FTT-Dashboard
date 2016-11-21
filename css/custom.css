@@ -32,29 +32,6 @@ a.morelink {display:inline-block; text-decoration: none; font-size:13px; font-we
 .alert{ display: none; }
 .table tbody tr th, .table tbody tr td {padding:5px;}
 
-/* MAKE TABLE SCROLL ONLY TABLE DATA */
-/* Put class called "scroll" inside <table> element to activate */
-
-table.scroll tbody,
-table.scroll thead tr { display: block; }
-
-table.scroll tbody {
-    height: 155px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-table.scroll tbody td,
-table.scroll thead th {
-    width: 140px;
-}
-
-table.scroll thead th:last-child {
-    width: 156px; /* 140px + 16px scrollbar width */
-}
-
-/* TABLE SCROLL CSS ENDS */
-
 
 /* PROGRESS BAR STARTS */
 .progress {

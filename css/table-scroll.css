@@ -1,0 +1,45 @@
+/* -- This makes table with 3 columns scroll */
+
+table.scroll-less tbody,
+table.scroll-less thead tr { display: block; }
+
+table.scroll-less tbody {
+    height: 155px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+table.scroll-less tbody td,
+table.scroll-less thead th {
+    width: 180px;
+}
+
+
+table.scroll-less thead th:last-child {
+    width: 196px; /* 140px + 16px scrollbar width */
+}
+
+
+
+/* -- This makes table with 4 columns scroll */
+
+table.scroll tbody,
+table.scroll thead tr { display: block; }
+
+table.scroll tbody {
+    height: 155px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+table.scroll tbody td,
+table.scroll thead th {
+    width: 140px;
+}
+
+
+table.scroll thead th:last-child {
+    width: 156px; /* 140px + 16px scrollbar width */
+}
+
+/* TABLE SCROLL CSS ENDS */
